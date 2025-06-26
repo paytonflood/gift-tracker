@@ -1,5 +1,5 @@
 import { addDoc, collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'; // Import the CSS file
 import { db } from './firebase';
 
@@ -112,7 +112,7 @@ const GiftTracker = () => {
       </form>
 
       <div>
-        <h2>Gifts Added by Payton</h2>
+        <h2>Gifts' Added by Payton</h2>
         <div className="gift-container">
           {gifts.filter((gift) => gift.addedBy === 'payton').map((gift) => (
             <div key={gift.id} className="gift-card">
